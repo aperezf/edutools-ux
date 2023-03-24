@@ -17,8 +17,6 @@ import { MainModule } from './main/main.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    AuthModule,
-    MainModule
   ],
   providers: [],
   bootstrap: [AppComponent]
