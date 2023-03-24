@@ -1,0 +1,32 @@
+:host {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    background: url('/assets/images/cool-background.png');
+    background-size: cover;
+  }
+  
+  .login-container {
+    height: 100%;
+    width: 40%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .login-container h1 {
+    text-align: center;
+    margin: 4rem 2rem 2rem 2rem;
+  }
+  
+  .login-container form {
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    row-gap: .7rem;
+  }
