@@ -5,6 +5,7 @@ import { SigninComponent } from './components/signin/signin.component';
 import { MaterialModule } from '../material/material.module';
 import { RouterModule } from '@angular/router';
 import { AuthRoutingModule } from './auth-routing.module';
+import { HttpClientModule } from '@angular/common/http'
 
 
 
@@ -17,6 +18,7 @@ import { AuthRoutingModule } from './auth-routing.module';
     CommonModule,
     MaterialModule,
     RouterModule,
+    HttpClientModule,
     AuthRoutingModule
   ]
 })
