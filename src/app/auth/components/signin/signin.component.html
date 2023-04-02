@@ -1,2 +1,31 @@
-<p>signin works!</p>
-<button mat-flat-button routerLink="/auth/login">login</button>
+<div class="login-container">
+  <h1>Bienvenido a EduTools</h1>
+  <form [formGroup]="signinForm" (ngSubmit)="signin()">
+    <mat-form-field appearance="outline">
+      <mat-label>Nombre</mat-label>
+      <input matInput type="text" formControlName="name" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput type="email" formControlName="email" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Contraseña</mat-label>
+      <input matInput type="password" formControlName="password" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Confirmar contraseña</mat-label>
+      <input matInput type="password" formControlName="confirmPassword" />
+    </mat-form-field>
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="signinForm.invalid"
+    >
+      Crear cuenta
+    </button>
+    <a mat-button routerLink="/auth/login">Iniciar sesión con una cuenta</a>
+  </form>
+</div>

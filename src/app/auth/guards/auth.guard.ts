@@ -5,8 +5,10 @@ import { map } from "rxjs";
 
 export const appGuard = 
   (route: ActivatedRouteSnapshot) => 
-    inject(AuthService).isAuthenticated().pipe(
-      map(logged => 
-        logged ? true : createUrlTreeFromSnapshot(route, ['/', 'auth', 'login'])
+    inject(AuthService).isAuthenticated$.pipe(
+      map((logged) => {
+        console.log('entra al guard con: ', logged)
+          return logged ? true : createUrlTreeFromSnapshot(route, ['/', 'auth', 'login']);
+        }
       )
     );

@@ -6,8 +6,7 @@ import { MaterialModule } from '../material/material.module';
 import { RouterModule } from '@angular/router';
 import { AuthRoutingModule } from './auth-routing.module';
 import { HttpClientModule } from '@angular/common/http'
-
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http'
     MaterialModule,
     RouterModule,
     HttpClientModule,
+    ReactiveFormsModule,
     AuthRoutingModule
   ]
 })
